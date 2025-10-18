@@ -7,7 +7,6 @@ tasks.getByName("jar") {
 }
 
 dependencies {
-    implementation(project(":core:core-application"))
     implementation(project(":core:core-enum"))
     implementation(project(":support:monitoring"))
     implementation(project(":support:logging"))

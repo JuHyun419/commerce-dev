@@ -28,3 +28,5 @@ pluginManagement {
         }
     }
 }
+
+include("core:core-application")
