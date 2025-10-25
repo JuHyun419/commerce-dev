@@ -1,4 +1,4 @@
-package jh.commrece.core.support
+package jh.commrece.core.support.page
 
 import org.springframework.data.domain.PageRequest
 import org.springframework.data.domain.Pageable

@@ -7,4 +7,5 @@ import org.springframework.data.jpa.repository.JpaRepository
 
 interface ProductCategoryRepository : JpaRepository<ProductCategoryEntity, Long> {
     fun findByCategoryIdAndStatus(categoryId: Long, status: EntityStatus, pageable: Pageable): Slice<ProductCategoryEntity>
+    fun findByProductIdInAndStatus(productIds: Collection<Long>, status: EntityStatus): List<ProductCategoryEntity>
 }
