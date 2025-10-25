@@ -33,4 +33,9 @@ class ReviewEntity(
     @Column(columnDefinition = "TEXT")
     var content: String = content
         protected set
+
+    fun updateContent(rate: BigDecimal, content: String) {
+        this.rate = rate
+        this.content = content
+    }
 }
