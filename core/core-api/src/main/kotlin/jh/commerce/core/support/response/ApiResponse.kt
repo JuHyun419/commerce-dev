@@ -1,7 +1,7 @@
 package jh.commerce.core.support.response
 
-import jh.commerce.core.support.error.ErrorMessage
-import jh.commerce.core.support.error.ErrorType
+import jh.commrece.core.support.error.ErrorMessage
+import jh.commrece.core.support.error.ErrorType
 
 
 data class ApiResponse<T> private constructor(

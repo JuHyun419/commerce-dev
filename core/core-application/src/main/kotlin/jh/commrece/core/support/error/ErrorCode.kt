@@ -1,4 +1,4 @@
-package jh.commerce.core.support.error
+package jh.commrece.core.support.error
 
 enum class ErrorCode {
     E500,

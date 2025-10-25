@@ -1,4 +1,4 @@
-package jh.commerce.core.support.error
+package jh.commrece.core.support.error
 
 import org.springframework.boot.logging.LogLevel
 import org.springframework.http.HttpStatus
