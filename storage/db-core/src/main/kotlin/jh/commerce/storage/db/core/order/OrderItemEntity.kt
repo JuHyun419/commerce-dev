@@ -1,4 +1,4 @@
-package jh.commrece.core.application.order
+package jh.commerce.storage.db.core.order
 
 import jakarta.persistence.Entity
 import jakarta.persistence.Table
