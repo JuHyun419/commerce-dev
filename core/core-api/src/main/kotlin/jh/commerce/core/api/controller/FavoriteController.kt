@@ -14,11 +14,11 @@ import org.springframework.web.bind.annotation.RequestBody
 import org.springframework.web.bind.annotation.RequestParam
 import org.springframework.web.bind.annotation.RestController
 
-@RestController
+@RestController("/api/v1")
 class FavoriteController(
     private val favoriteService: FavoriteService,
 ) {
-    @GetMapping("/v1/favorites")
+    @GetMapping("/favorites")
     fun getFavorites(
         user: User,
         @RequestParam offset: Int,
@@ -29,7 +29,7 @@ class FavoriteController(
         return ApiResponse.success(PageResponse(FavoriteResponse.of(page.content), page.hasNext))
     }
 
-    @PostMapping("/v1/favorites")
+    @PostMapping("/favorites")
     fun applyFavorite(
         user: User,
         @RequestBody request: ApplyFavoriteRequest,
