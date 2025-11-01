@@ -1,7 +1,9 @@
 package jh.commrece.core.application.review
 
+import jh.commrece.core.application.point.PointAmount
 import jh.commrece.core.application.point.PointHandler
 import jh.commrece.core.application.user.User
+import jh.commrece.core.enums.PointType
 import jh.commrece.core.support.page.OffsetLimit
 import jh.commrece.core.support.page.Page
 import org.springframework.stereotype.Service
@@ -25,7 +27,7 @@ class ReviewService(
         val reviewKey = reviewPolicyValidator.validateNew(user, target)
         val reviewId = reviewManager.add(reviewKey, target, content)
 
-        pointHandler.earn()
+        pointHandler.earn(user, PointType.REVIEW, reviewId, PointAmount.REVIEW)
 
         return reviewId
     }
@@ -41,7 +43,7 @@ class ReviewService(
     fun removeReview(user: User, reviewId: Long): Long {
         val deletedReviewId = reviewManager.delete(user, reviewId)
 
-        pointHandler.deduct()
+        pointHandler.deduct(user, PointType.REVIEW, deletedReviewId, PointAmount.REVIEW)
 
         return deletedReviewId
     }
